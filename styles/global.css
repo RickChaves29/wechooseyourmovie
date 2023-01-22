@@ -1,0 +1,102 @@
+body {
+  color: #fffcf9;
+  background: linear-gradient(
+    67.08deg,
+    #1e46a3 0%,
+    #000000 48.94%,
+    #c12a23 99.97%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  height: 100%;
+}
+main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+main > section > img {
+  width: 87.24px;
+  height: 62.93px;
+}
+main > section > h1 {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+}
+
+main > section > p {
+  text-align: center;
+  max-width: 381px;
+}
+
+main > section > .result-movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+main > section > .result-movie-container > button {
+  background-color: #e9e6e3;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 11px;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  font-weight: 700;
+  text-align: center;
+}
+main > section > .result-movie-container > button:hover {
+  cursor: pointer;
+}
+
+main > section > .result-movie-container > button > img {
+  width: 35.56px;
+  height: 25.29px;
+}
+main > section > .result-movie-container > .movie-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  max-width: 628px;
+}
+main > section > .result-movie-container > .movie-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main > section > .result-movie-container > .movie-container > p {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  main > section > .result-movie-container {
+    flex-direction: column-reverse;
+  }
+  main > section > .result-movie-container > .movie-container {
+    flex-direction: column;
+    gap: 34px;
+  }
+  main > section > .result-movie-container > .movie-container > div {
+    align-items: center;
+    justify-content: center;
+  }
+  main > section > .result-movie-container > .movie-container > div > p {
+    text-align: center;
+  }
+}
