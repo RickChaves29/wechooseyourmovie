@@ -1,5 +1,5 @@
 const requestMovie = fetch(
-  `https://api.themoviedb.org/3/movie/76341?api_key={%ENV["API_KEY_MOVIEDB"]%}"`
+  `https://api.themoviedb.org/3/movie/76341?api_key=284255dfe1f4a024f1acf566b5342314"`
 );
 const movieBox = document.getElementById("movie-container");
 const moviePoster = document.getElementById("poster-movie");
