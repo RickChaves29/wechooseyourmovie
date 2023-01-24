@@ -1,7 +1,7 @@
 {
   "name": "We Choose Your Movie",
   "short_name": "WeChooseYourMovie",
-  "start_url": "/index.html",
+  "start_url": ".",
   "prefer_related_applications": true,
 
   "icons": [

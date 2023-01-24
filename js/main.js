@@ -34,4 +34,22 @@ function main() {
     });
   });
 }
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("serviceWorker.js", {
+        scope: ".",
+      })
+      .then((register) => {
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          register.scope
+        );
+      })
+      .catch(function (err) {
+        console.log("ServiceWorker registration failed: ", err);
+      });
+  });
+}
 main();
