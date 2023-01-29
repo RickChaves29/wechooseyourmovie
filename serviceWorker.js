@@ -5,8 +5,8 @@ const staticFiles = [
   "/styles/global.css",
   "/styles/reset.css",
   "/js/main.js",
-  "assets/logo.svg",
-  "assets/poster.svg",
+  "/wechooseyourmovie/assets/logo.svg",
+  "/wechooseyourmovie/assets/poster.svg",
 ];
 
 self.addEventListener("install", (event) => {
