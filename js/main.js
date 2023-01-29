@@ -3,27 +3,23 @@ const moviePoster = document.getElementById("poster-movie");
 const movieTitle = document.getElementById("title-movie");
 const movieDescription = document.getElementById("description-movie");
 const btnController = document.getElementById("btn-controller");
-let movieID = 0;
 
 function main() {
   btnController.addEventListener("click", () => {
-    function generateNumber() {
-      movieID += Math.floor(Math.random() * 999);
-    }
-    generateNumber();
     fetch(
-      `https://api.themoviedb.org/3/movie/${movieID}?api_key=284255dfe1f4a024f1acf566b5342314`
+      "https://olwoovx6yiwwh2glksusdjonmm0etxcd.lambda-url.us-east-2.on.aws/"
     ).then((res) => {
       if (res.ok == true && res.status == 200) {
         res.json().then((data) => {
-          let { original_title, overview, poster_path } = data;
+          console.log(data);
+          let { title, description, poster } = data;
           movieBox.style.display = "flex";
           moviePoster.setAttribute(
             "src",
-            `https://image.tmdb.org/t/p/original${poster_path}`
+            `https://image.tmdb.org/t/p/original${poster}`
           );
-          movieTitle.textContent = original_title;
-          movieDescription.textContent = overview;
+          movieTitle.textContent = title;
+          movieDescription.textContent = description;
         });
       } else if (res.ok == false && res.status == 404) {
         movieBox.style.display = "flex";
