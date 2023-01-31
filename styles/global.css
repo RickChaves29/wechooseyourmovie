@@ -103,3 +103,20 @@ main > section > .result-movie-container > #movie-container > img {
     text-align: center;
   }
 }
+#loader {
+  border: 10px solid #1a1a1a;
+  border-top: 10px solid #c12a23;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
